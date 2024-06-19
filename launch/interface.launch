@@ -1,0 +1,5 @@
+<launch>
+<!-- 포즈 인터페이스 노드 -->
+    <node name="pose_interface_node" pkg="yolov8_ROS" type="interface.py" output="screen" />
+</launch>
+

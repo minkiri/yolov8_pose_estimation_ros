@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <node name="yolov8_pose_ROS" pkg="yolov8_ROS" type="pose_estimation.py" output="screen">
+        <param name="source" value="/usb_cam/image_raw/compressed" />
+        <param name="weights" value="$(find yolov8_ROS)/yolov8n-pose.pt" /> <!-- 포즈 추적 모델로 변경 -->
+        <param name="conf" value="0.2" />
+        <param name="imgsz_h" value="640" />
+        <param name="imgsz_w" value="480" />
+        <param name="device" value="0" />
+    </node>
+</launch>
+
